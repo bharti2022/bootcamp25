@@ -1,0 +1,10 @@
+FROM mysql:latest
+
+ENV MYSQL_DATABASE=bc_25_gc
+ENV MYSQL_USER=gc
+ENV MYSQL_PASSWORD=Gc@12345
+ENV MYSQL_ALLOW_EMPTY_PASSWORD=1
+
+ADD ./ ./docker-entrypoint-initdb.d
+
+EXPOSE 3306

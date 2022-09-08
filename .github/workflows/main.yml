@@ -27,5 +27,9 @@ jobs:
       - name: docker build backend
         run: docker build ./backend/ -t ghcr.io/bharti2022/green-commute-backend:latest
       - name: docker push  backend
-        run: docker push ghcr.io/bharti2022/green-commute-backend:latest  
+        run: docker push ghcr.io/bharti2022/green-commute-backend:latest
+      - name: build database 
+        run: docker build ./Database_bc25/ -t ghcr.io/bharti2022/green-commute-db:latest
+      - name: docker push database
+        run: docker push ghcr.io/bharti2022/green-commute-db:latest
            
