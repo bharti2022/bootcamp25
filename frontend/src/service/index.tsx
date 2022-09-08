@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: `http://52.87.214.107:8000`,
+  baseURL: `http://54.159.216.84:8000`,
 });
 
 export const getAqi = async (city: any) => {
