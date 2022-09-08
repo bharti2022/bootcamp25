@@ -15,8 +15,9 @@ services:
       - 3306:3306  
 
   backend:
-    build:
-      context: ./backend  
+    # build:
+    #   context: ./backend
+    image: ghcr.io/bharti2022/green-commute-backend:latest
     restart: always  
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://database:3306/bc_25_gc?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
@@ -28,8 +29,9 @@ services:
      - db 
 
   frontend:
-    build:
-      context:  ./frontend
+    # build:
+    #   context:  ./frontend
+    image: ghcr.io/bharti2022/green-commute-frontend:latest
     ports: 
       - 8080:8080
     depends_on:
