@@ -1,10 +1,10 @@
 version: '2'
 services:
 
-  db:
-    # image: mysql:latest
-    build: ./Database_bc25
-    container_name: database
+  # db:
+  #   # image: mysql:latest
+  #   build: ./Database_bc25
+  #   container_name: database
   #   environment:
   #     MYSQL_DATABASE: bc_25_gc
   #     MYSQL_USER: gc
@@ -21,7 +21,7 @@ services:
     image: ghcr.io/bharti2022/green-commute-backend:latest
     restart: always  
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://database:3306/bc_25_gc?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+      SPRING_DATASOURCE_URL: jdbc:mysql://34.227.26.11:3306/bc_25_gc?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: gc
       SPRING_DATASOURCE_PASSWORD: Gc@12345   
     ports:
