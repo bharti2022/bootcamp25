@@ -11,5 +11,5 @@ export const getAqi = async (city: any) => {
 };
 
 export const getSkills = async (name: any) => {
-  return axios.get(`http://52.87.214.107:8000/v1/skills/${name}`);
+  return axios.get(`http://54.159.216.84:8000/v1/skills/${name}`);
 };
